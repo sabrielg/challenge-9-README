@@ -1,7 +1,7 @@
- # lksjf;al
+ # Run Buddy
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Description
-slkfjda;l
+a site to help runners connect with coaches
 ## Table of Contents
 * [Usage](#usage)
 
@@ -12,15 +12,15 @@ slkfjda;l
 * [Tests](#tests)
 * [Contact](#contact)
 ## Usage
-lskjfd;al
+type in your email address to get started
 ## License
   This project is licensed under the MIT license.
 ## Installation
-slkjfd;al
+go to the website!
 ## Contributors
-slkfjdl;a
+Armando Osario
 ## Test
-lskfa;
+n/a
 ## Contact
 If you have any questions about the repo, open an issue or contact me directly at
 sabriel@thirdsun.com. 
