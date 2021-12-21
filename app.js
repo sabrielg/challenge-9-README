@@ -31,17 +31,6 @@ const promptUser = () => {
                 }
             }
         },
-        {
-            type: 'confirm',
-            name: 'confirmAbout',
-            message: 'Would you like to enter some information about yourself for an "About" section?',
-            default: true
-        },
-        {type: 'input',
-        name: 'about',
-        message:'Provide some information about yourself:',
-        when: ({confirmAbout}) => confirmAbout
-    }
     ]);
 };
 
@@ -83,15 +72,54 @@ const promptProject = portfolioData => {
             }
         },
         {
+            type: 'input',
+            name: 'installation',
+            message: 'Provide a installation instructions for your project (Required)',
+            validate: installationInput => {
+                if (installationInput){
+                return true;
+                } else {
+                    console.log('You need to enter installation instructions!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide a usage instructions for your project (Required)',
+            validate: usageInput => {
+                if (usageInput){
+                return true;
+                } else {
+                    console.log('You need to enter usage instructions!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contributors',
+            message: 'Please list any contributors to the project(Required)',
+            validate: contributorInput => {
+                if(contributorInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter contributors!');
+                    return false;
+                }
+            }
+        },
+        {
             type: 'checkbox',
-            name: 'languages',
-            message: 'What did you build this project with? (Check all that apply)',
+            name: 'licenses',
+            message: 'What license would you like to include? (Check all that apply)',
             choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'JQuery', 'Bootstrap', 'Node']
         },
         {
             type: 'input',
             name: 'link',
-            message: 'Enter Github link to your project (Required)',
+            message: 'Enter deployed website link to your project (Required)',
             validate: linkInput => {
                 if (linkInput){
                     return true;
@@ -101,18 +129,6 @@ const promptProject = portfolioData => {
                 }
             }
         },
-        {
-            type: 'confirm',
-            name: 'feature',
-            message: 'Would you like to feature this project?',
-            default: false
-        },
-        {
-            type: 'confirm',
-            name: 'confirmAddProject',
-            message: 'Would you like to enter another project?',
-            default: false
-        }
     ])
     .then(projectData => {
         portfolioData.projects.push(projectData);
