@@ -1,25 +1,25 @@
 const generateMarkDown = (data) => {
     return ` # ${data.title}
-    ##Description
+    ## Description
     ${data.description}
-    ##Table of Contents
+    ## Table of Contents
     * [Usage](#usage)
-    *[Installation](#installation)
+    * [Installation](#installation)
     * [Contributors](#contributors)
     * [Tests](#tests)
     * [Licenses](#licenses)
     * [Contact](#contact)
-    ##Usage
+    ## Usage
     ${data.usage}
-    ##Installation
+    ## Installation
     ${data.installation}
-    ##Contributors
+    ## Contributors
     ${data.contributors}
-    ##Tests
+    ## Tests
     ${data.tests}
-    ##Licenses
+    ## Licenses
     ${data.licenses}
-    ##Contact
+    ## Contact
     ${data.email}
     `
 }

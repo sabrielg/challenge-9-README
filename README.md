@@ -1,23 +1,23 @@
  # aslkfs;
-    ##Description
+    ## Description
     sl;akfa
-    ##Table of Contents
+    ## Table of Contents
     * [Usage](#usage)
-    *[Installation](#installation)
+    * [Installation](#installation)
     * [Contributors](#contributors)
     * [Tests](#tests)
     * [Licenses](#licenses)
     * [Contact](#contact)
-    ##Usage
+    ## Usage
     slakfjs;al
-    ##Installation
+    ## Installation
     slkafjas;l
-    ##Contributors
+    ## Contributors
     slkjfa;
-    ##Tests
+    ## Tests
     undefined
-    ##Licenses
+    ## Licenses
     MIT
-    ##Contact
+    ## Contact
     slkafs;al
     
