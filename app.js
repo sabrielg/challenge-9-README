@@ -1,7 +1,8 @@
 const fs = require('fs')
 const inquirer = require('inquirer');
-console.log(inquirer)
-const generatePage = require('challenge-9-README/src/page-template.js');
+const path =require("path");
+console.log(inquirer);
+const generateMarkDown = require('./src/page-template.js');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -31,23 +32,9 @@ const promptUser = () => {
                 }
             }
         },
-    ]);
-};
-
-const promptProject = portfolioData => {
-    console.log(`
-    =================
-    Add a New Project
-    =================
-    `);
-
-    if(!portfolioData.projects) {
-    portfolioData.projects = [];
-    }
-    return inquirer.prompt ([
         {
             type: 'input',
-            name: 'name',
+            name: 'title',
             message: 'What is the name of your project? (Required)',
             validate: nameInput => {
                 if(nameInput) {
@@ -111,10 +98,10 @@ const promptProject = portfolioData => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
-            message: 'What license would you like to include? (Check all that apply)',
-            choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'JQuery', 'Bootstrap', 'Node']
+            message: 'What license would you like to include?',
+            choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
         },
         {
             type: 'input',
@@ -124,35 +111,46 @@ const promptProject = portfolioData => {
                 if (linkInput){
                     return true;
                 } else {
-                    console.log ('You need to enter a project GitHub Link!');
+                    console.log ('You need to enter a project link!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'What command should be run to run tests?',
+            default: 'npm test',
+          },
+          {
+            type: 'input',
+            name: 'email',
+            message: 'Enter an email address (Required)',
+            validate: emailInput => {
+                if (emailInput){
+                    return true;
+                } else {
+                    console.log ('You need to enter an email!');
                     return false;
                 }
             }
         },
     ])
-    .then(projectData => {
-        portfolioData.projects.push(projectData);
-        if (projectData.confirmAddProject) {
-            return promptProject(portfolioData);
-        } else {
-            return portfolioData;
-        }
+    .then(answer => {
+        console.log(answer)
+        writeToFile("readme.md", generateMarkDown({
+            ...answer
+        }))
     });
     
 };
 
+const writeToFile = (filename, data) => {
+    return fs.writeFileSync(path.join(process.cwd(), filename), data);
+}
 
 
 promptUser()
-.then(promptProject)
-.then(portfolioData => {
-    console.log(portfolioData);
 
-      const pageHTML = generatePage(portfolioData);
-    fs.writeFile('./index.html', pageHTML, err => {
-      if (err) throw new Error(err);
-      console.log('Page created! Check out index.html in this directory to see it!');
-    });
-});
 
 
