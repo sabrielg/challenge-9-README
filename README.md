@@ -1,22 +1,27 @@
- # aslkfs
+ # lksjf;al
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Description
-    sl;akfa
+slkfjda;l
 ## Table of Contents
 * [Usage](#usage)
+
+* [License](#license)
+
 * [Installation](#installation)
 * [Contributors](#contributors)
 * [Tests](#tests)
-* [Licenses](#licenses)
 * [Contact](#contact)
 ## Usage
-slakfjs;al
+lskjfd;al
+## License
+  This project is licensed under the MIT license.
 ## Installation
-slkafjas;l
+slkjfd;al
 ## Contributors
-slkjfa;
-## Tests
-undefined
-## Licenses
-MIT
+slkfjdl;a
+## Test
+lskfa;
 ## Contact
-lkafs;al
+If you have any questions about the repo, open an issue or contact me directly at
+sabriel@thirdsun.com. 
+You can find more of my work at [sabrielg](https://github.com/sabrielg/).

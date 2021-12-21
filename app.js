@@ -99,7 +99,7 @@ const promptUser = () => {
         },
         {
             type: 'list',
-            name: 'licenses',
+            name: 'license',
             message: 'What license would you like to include?',
             choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
         },
