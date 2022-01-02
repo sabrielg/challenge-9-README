@@ -1,7 +1,7 @@
- # Run Buddy
+ # README generator
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Description
-a site to help runners connect with coaches
+Using node and inquirer a user can quickly and easily create a README for their project.
 ## Table of Contents
 * [Usage](#usage)
 
@@ -12,16 +12,16 @@ a site to help runners connect with coaches
 * [Tests](#tests)
 * [Contact](#contact)
 ## Usage
-type in your email address to get started
+Once you've copied the repo run the program by inputting "node app.js" into the command line. The prompts will then appear for you.
 ## License
   This project is licensed under the MIT license.
 ## Installation
-go to the website!
+Fork or copy over the repo and run it on your computer in order to use this generator.
 ## Contributors
-Armando Osario
-## Test
-n/a
+Armando Osario (my tutor)
+## Walkthrough Link
+[walkthrough](https://watch.screencastify.com/v/B0YFnXjOqIE6eJjJ9zAA)
 ## Contact
 If you have any questions about the repo, open an issue or contact me directly at
-sabriel@thirdsun.com. 
+sabrielkristine@gmail.com. 
 You can find more of my work at [sabrielg](https://github.com/sabrielg/).
